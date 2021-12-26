@@ -1,7 +1,11 @@
 totalNumber = ARGV[0].to_i
 
-def declinationCrocodail(number, formOne, formTwo, formThree)
+def declination(number, formOne, formTwo, formThree)
     # hand over in function arguments number, one, two and tree declination (total four argument)
+    if number == nil or !number.is_a?(Numeric)
+        number = 0
+    end
+
     remainder = number % 10
 
     if remainder == 1
@@ -14,4 +18,4 @@ def declinationCrocodail(number, formOne, formTwo, formThree)
 end
 
 
-puts declinationCrocodail(totalNumber, "крокодил", "крокодила", "крокодилов")
+puts declination(totalNumber, "крокодил", "крокодила", "крокодилов")
